@@ -1,0 +1,87 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('/background\ img.jpeg');
+    /* background-position: absolute; */
+    background-size: cover;
+    /* background-repeat: no-repeat;  */
+    height: 100vh;
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0; */
+}
+.countdown-container{
+    text-align: center;
+    font-size: 18px;
+}
+.countdown-timer{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+   color: #fff;
+}
+.countdown-label{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    margin-top: -160px;
+    /* margin-right: 10px; */
+}
+.text{
+    color: #fff;
+}
+.btn{
+    padding: 0.2rem;
+    border-radius: 10px;
+    border: none;
+    margin-top: 20px;
+    position: relative;
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+}
+.in{
+    padding:10px;
+    border-radius: 10px;
+    background-color: #0a2437;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+    z-index: 99;
+    transition: 0.5s;
+}
+.container-1 a{
+    text-decoration: none;
+    color: red;
+}  
+.btn::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2rem;
+    height: 10rem;
+    background: white;
+    transform: translate(-50%, -50%) rotate(45deg);
+    animation: animate 2s linear infinite;
+}
+@keyframes animate {
+    100%{
+        transform: translate(-50%, -50%) rotate(255deg);
+    }
+}
+.btn:hover .in{
+    transition-delay: 0.5s;
+    background: white;
+    color: black;
+}
+.btn:hover{
+    transition-delay: 0.5s;
+    background: white;
+    box-shadow: 0 0 10px white,
+    0 0 40px white,
+    0 0 80px white;
+}

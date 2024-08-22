@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Project</title>
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index2.html">
+</head>
+
+<body>
+    
+    <div class="countdown-container">
+        <div class="countdown-label">New Year coming 2025</div>
+        <div class="countdown-timer" id="countdown"></div>
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        <lord-icon src="https://cdn.lordicon.com/epietrpn.json" trigger="hover" style="width:50px;height:50px">
+        </lord-icon>
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        <lord-icon src="https://cdn.lordicon.com/tdtlrbly.json" trigger="hover" style="width:50px;height:50px">
+        </lord-icon>
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        <lord-icon src="https://cdn.lordicon.com/pvwuzuvc.json" trigger="hover"
+            colors="primary:#121331,secondary:#2ca58d,tertiary:#30e849" style="width:50px;height:50px">
+        </lord-icon>
+
+        <div class="container-1">
+            <button class="btn">
+                <div class="in"><a href="https://github.com/junaidhusain4006?tab=repositories">Download code</a></div>
+            </button>
+        </div>
+        <script>
+            const targetDate = new Date('2025-01-01T00:00:00')
+
+            function updateCountdown() {
+                const currentDate = new Date();
+                const timeDifference = targetDate - currentDate
+                const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+                const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60))
+                const seconds = Math.floor((timeDifference) % (1000 * 60)) / (1000)
+
+                document.getElementById('countdown').innerHTML = `${days} Days ${hours} Hours ${minutes} Min ${seconds}Sec`
+
+                setTimeout(updateCountdown, 1000)
+            }
+
+            updateCountdown()
+        </script>
+
+</body>
+
+</html>
